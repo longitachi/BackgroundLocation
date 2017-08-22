@@ -15,6 +15,7 @@
 		FD0349AB1F4BB8CF00FE92BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0349AA1F4BB8CF00FE92BE /* main.m */; };
 		FD0349B51F4BB8CF00FE92BE /* BackgroundLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0349B41F4BB8CF00FE92BE /* BackgroundLocationTests.m */; };
 		FD0349C01F4BB8CF00FE92BE /* BackgroundLocationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0349BF1F4BB8CF00FE92BE /* BackgroundLocationUITests.m */; };
+		FD0349CF1F4BB8EB00FE92BE /* LocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0349CE1F4BB8EA00FE92BE /* LocationTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		FD0349BB1F4BB8CF00FE92BE /* BackgroundLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0349BF1F4BB8CF00FE92BE /* BackgroundLocationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundLocationUITests.m; sourceTree = "<group>"; };
 		FD0349C11F4BB8CF00FE92BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD0349CD1F4BB8EA00FE92BE /* LocationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationTool.h; sourceTree = "<group>"; };
+		FD0349CE1F4BB8EA00FE92BE /* LocationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		FD03499A1F4BB8CF00FE92BE /* BackgroundLocation */ = {
 			isa = PBXGroup;
 			children = (
+				FD0349CD1F4BB8EA00FE92BE /* LocationTool.h */,
+				FD0349CE1F4BB8EA00FE92BE /* LocationTool.m */,
 				FD03499B1F4BB8CF00FE92BE /* AppDelegate.h */,
 				FD03499C1F4BB8CF00FE92BE /* AppDelegate.m */,
 				FD03499E1F4BB8CF00FE92BE /* ViewController.h */,
@@ -199,6 +204,11 @@
 				TargetAttributes = {
 					FD0349971F4BB8CF00FE92BE = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					FD0349AF1F4BB8CF00FE92BE = {
 						CreatedOnToolsVersion = 9.0;
@@ -262,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD0349CF1F4BB8EB00FE92BE /* LocationTool.m in Sources */,
 				FD0349A01F4BB8CF00FE92BE /* ViewController.m in Sources */,
 				FD0349AB1F4BB8CF00FE92BE /* main.m in Sources */,
 				FD03499D1F4BB8CF00FE92BE /* AppDelegate.m in Sources */,
@@ -427,9 +438,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47UY3G7UH6;
 				INFOPLIST_FILE = BackgroundLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = I.BackgroundLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = ZL.Bluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,9 +452,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 47UY3G7UH6;
 				INFOPLIST_FILE = BackgroundLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = I.BackgroundLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = ZL.Bluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
